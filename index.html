@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Web Sitem | [Adın Soyadın]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Modern Gradient Arka Plan */
+        body {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-sm shadow-md" data-aos="fade-down" data-aos-duration="1000">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-400">ALDAG</a>
+            <div class="space-x-6 text-gray-300">
+                <a href="#home" class="hover:text-white transition">Ana Sayfa</a>
+                <a href="#about" class="hover:text-white transition">Hakkımda</a>
+                <a href="#projects" class="hover:text-white transition">Projeler</a>
+                <a href="#contact" class="hover:text-white transition">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen flex items-center justify-center text-center px-6">
+        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-6">Merhaba, Ben <span class="text-teal-400">Mehmet Enes ALdağ</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Dijital deneyimler tasarlayan ve inşa eden bir bir bilgisayar mühendisliği öğrencisiyim.
+            </p>
+            <div class="space-x-4">
+                <a href="#about" class="bg-teal-500 text-gray-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-teal-400 transition transform hover:scale-105 inline-block">Beni Tanı</a>
+                <a href="#projects" class="border border-gray-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-800 transition inline-block">Projelerimi Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <img src="assets/1750763591203.png" alt="Hakkımda Resmi" class="rounded-2xl shadow-2xl object-cover w-full h-auto">
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+                <h2 class="text-4xl font-bold mb-6 text-teal-400">Hakkımda</h2>
+                <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                    Ben bir bilgisayar mühendisliği öğrencisi olarak HTML,CSS, C, Python, Java, PostgreSQL, JavaScript, React gibi dller hakkında genel knowledge'a sahip biriyim.
+                </p>
+                <div class="flex flex-wrap gap-3 text-sm">
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">HTML</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">CSS</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">C</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">Python</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">Java</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">JavaScript</span>
+                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">React</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16 text-teal-400" data-aos="fade-up">Öne Çıkan Projelerim</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-4">SAHA</h3>
+                    <p class="text-gray-400 mb-6">Futbolda anlık ve canlı skor takibi</p>
+                    <a href="https://live-score-dashboard.vercel.app/" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-4">Lingova</h3>
+                    <p class="text-gray-400 mb-6">Yakında yayına alacağım dil öğrenme web sitemiz</p>
+                    <a href="#" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-teal-950/30">
+        <div class="max-w-3xl mx-auto px-6 text-center" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="text-4xl font-bold mb-6 text-teal-400">İletişime Geç</h2>
+            <p class="text-lg text-gray-300 mb-10">
+                Yeni bir proje, iş fırsatı veya sadece sohbet etmek için bana ulaşabilirsin.
+            </p>
+            <a href="mailto:mehmetenesaldag@gmail.com" class="text-3xl font-bold text-white hover:text-teal-300 transition break-words">mehmetenesaldag@gmail.com</a>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-gray-950 text-center text-gray-500 border-t border-gray-800">
+        <p>&copy; 2026 [Adın Soyadın]. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS Kütüphanesini Başlat (Global Ayarlar)
+        AOS.init({
+            once: false, // Animasyonların her kaydırmada tekrar çalışması için false yap
+            mirror: true // Sayfa yukarı kaydırılırken de animasyonların çalışmasını sağlar
+        });
+    </script>
+</body>
+</html>
