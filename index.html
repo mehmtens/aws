@@ -1,127 +1,400 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kişisel Web Sitem | [Adın Soyadın]</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        /* Modern Gradient Arka Plan */
-        body {
-            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mehmet Enes Aldağ - Professional Computer Engineer & Full-Stack / Systems Developer Portfolio. Explore real-time web applications, C++ emulators, and physics engines.">
+  <meta name="keywords" content="Mehmet Enes Aldağ, Computer Engineer, Software Engineer, Web Developer, C++, Physics Engine, React, Python, Java, PostgreSQL, Portfolio">
+  <meta name="author" content="Mehmet Enes Aldağ">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mehmet Enes Aldağ | Computer Engineer & Developer">
+  <meta property="og:description" content="Building Scalable Systems, C++ Emulators, High-Performance Web Applications, and Clean Software Architecture.">
+  <meta property="og:type" content="website">
+  
+  <title>Mehmet Enes Aldağ | Computer Engineer Portfolio</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-sm shadow-md" data-aos="fade-down" data-aos-duration="1000">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-teal-400">ALDAG</a>
-            <div class="space-x-6 text-gray-300">
-                <a href="#home" class="hover:text-white transition">Ana Sayfa</a>
-                <a href="#about" class="hover:text-white transition">Hakkımda</a>
-                <a href="#projects" class="hover:text-white transition">Projeler</a>
-                <a href="#contact" class="hover:text-white transition">İletişim</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Engineering Mesh Grid Background -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
 
-    <section id="home" class="h-screen flex items-center justify-center text-center px-6">
-        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-6">Merhaba, Ben <span class="text-teal-400">Mehmet Enes ALdağ</span></h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Dijital deneyimler tasarlayan ve inşa eden bir bir bilgisayar mühendisliği öğrencisiyim.
+  <!-- Navigation Bar -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Mehmet Enes Aldag Homepage">
+        <span class="brand-dot"></span>
+        <span>ALDAG<span style="color: var(--accent-primary);">.DEV()</span></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links-menu">
+          <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#timeline" class="nav-link" data-i18n="nav.timeline">Journey</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme & Lang Controls) -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <button id="lang-toggle-btn" class="btn btn-sm btn-secondary font-mono" aria-label="Switch Language">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span id="lang-label">TR</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button id="theme-toggle-btn" class="btn btn-sm btn-secondary font-mono" aria-label="Toggle Theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <span id="theme-label">DARK</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="nav-mobile-toggle" class="nav-toggle-btn" aria-label="Open Mobile Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column -->
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-indicator"></span>
+              <span data-i18n="hero.greeting">Hello, world! I am</span>
+            </div>
+
+            <h1 class="hero-title">Mehmet Enes Aldağ</h1>
+
+            <div class="hero-typewriter-wrapper" aria-live="polite">
+              <span id="hero-typewriter-text"></span>
+              <span class="typewriter-cursor"></span>
+            </div>
+
+            <p class="hero-description" data-i18n="hero.description">
+              Passionate computer engineering student dedicated to architecting reliable software, interactive web applications, systems emulators, and scalable digital solutions with modern best practices.
             </p>
-            <div class="space-x-4">
-                <a href="#about" class="bg-teal-500 text-gray-900 px-8 py-3 rounded-full font-bold text-lg hover:bg-teal-400 transition transform hover:scale-105 inline-block">Beni Tanı</a>
-                <a href="#projects" class="border border-gray-600 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-800 transition inline-block">Projelerimi Gör</a>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">
+                Explore Projects
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary" data-i18n="hero.ctaContact">
+                Get in Touch
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
             </div>
+
+            <!-- Metrics Bar -->
+            <div class="hero-metrics">
+              <div class="metric-item">
+                <span class="metric-value">5+</span>
+                <span class="metric-label" data-i18n="about.pillars.0.title">Live Systems & Apps</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">8+</span>
+                <span class="metric-label">Tech Stacks & Langs</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">100%</span>
+                <span class="metric-label">Clean Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Interactive Developer CLI -->
+          <div class="hero-terminal-wrapper">
+            <div class="terminal-window" id="hero-terminal">
+              <div class="terminal-header">
+                <div class="terminal-buttons">
+                  <span class="terminal-dot close"></span>
+                  <span class="terminal-dot minimize"></span>
+                  <span class="terminal-dot maximize"></span>
+                </div>
+                <div class="terminal-title">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                  <span data-i18n="hero.terminalTitle">aldag@engineer-workstation:~</span>
+                </div>
+                <div style="width: 40px;"></div>
+              </div>
+              
+              <div class="terminal-body" id="terminal-cli-body">
+                <div class="terminal-prompt-line">
+                  <span class="terminal-prompt-symbol">guest@aldag:~$</span>
+                  <input type="text" id="terminal-cli-input" class="terminal-input" placeholder="Type a command (e.g. 'help', 'skills', 'about')..." autocomplete="off" spellcheck="false">
+                </div>
+              </div>
+
+              <!-- Quick Command Chips -->
+              <div class="terminal-chips">
+                <button class="terminal-chip" data-cmd="help">help</button>
+                <button class="terminal-chip" data-cmd="about">about</button>
+                <button class="terminal-chip" data-cmd="skills">skills</button>
+                <button class="terminal-chip" data-cmd="projects">projects</button>
+                <button class="terminal-chip" data-cmd="contact">contact</button>
+                <button class="terminal-chip" data-cmd="clear">clear</button>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <section id="about" class="py-24 bg-gray-800/50">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" data-aos-duration="1000">
-                <img src="assets/1750763591203.png" alt="Hakkımda Resmi" class="rounded-2xl shadow-2xl object-cover w-full h-auto">
-            </div>
-            <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-                <h2 class="text-4xl font-bold mb-6 text-teal-400">Hakkımda</h2>
-                <p class="text-gray-300 mb-6 text-lg leading-relaxed">
-                    Ben bir bilgisayar mühendisliği öğrencisi olarak HTML,CSS, C, Python, Java, PostgreSQL, JavaScript, React gibi dller hakkında genel knowledge'a sahip biriyim.
-                </p>
-                <div class="flex flex-wrap gap-3 text-sm">
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">HTML</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">CSS</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">C</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">Python</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">Java</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">JavaScript</span>
-                    <span class="bg-gray-700 px-4 py-2 rounded-full text-gray-200">React</span>
-                </div>
-            </div>
+    <!-- 2. About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="about.tag">Engineering Profile</span>
+          <h2 class="section-title" data-i18n="about.title">Architecting Software with Purpose</h2>
+          <p class="section-subtitle" data-i18n="about.subtitle">A blend of academic foundations and hands-on modern software engineering.</p>
         </div>
-    </section>
 
-    <section id="projects" class="py-24">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16 text-teal-400" data-aos="fade-up">Öne Çıkan Projelerim</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-4">SAHA</h3>
-                    <p class="text-gray-400 mb-6">Futbolda anlık ve canlı skor takibi</p>
-                    <a href="https://live-score-dashboard.vercel.app/" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
+        <div class="about-grid">
+          <!-- Profile Picture with Tech Frame -->
+          <div class="about-image-wrapper">
+            <div class="about-image-frame">
+              <img src="assets/1750763591203.png" alt="Mehmet Enes Aldağ - Computer Engineer Profile Photo">
+              <div class="about-badge">
+                <div class="about-badge-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
                 </div>
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4">Lingova</h3>
-                    <p class="text-gray-400 mb-6">Dil öğrenme platformumuz</p>
-                    <a href="https://lingova-dcan.vercel.app/" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
+                <div class="about-badge-text">
+                  <h4 data-i18n="about.badgeTitle">Computer Engineering Student</h4>
+                  <p data-i18n="about.badgeSub">Algorithm & Systems Focused</p>
                 </div>
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4">SimuMath</h3>
-                    <p class="text-gray-400 mb-6">Denklemden diyagrama, tek pencerede.</p>
-                    <a href="https://simumath-web.vercel.app/" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4">CHIP-8 Emulator</h3>
-                    <p class="text-gray-400 mb-6">C++ ile hardcoded CHIP-8 Emulator </p>
-                    <a href="https://github.com/mehmtens/chip8-emulator" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-teal-900/30 transition-all border border-gray-800 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4">Elementum</h3>
-                    <p class="text-gray-400 mb-6">Pixel Physics Engine & Sandbox</p>
-                    <a href="https://mehmtens.github.io/elementum/" class="text-teal-400 font-semibold hover:text-teal-300 transition">İncele →</a>
-                </div>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
 
-    <section id="contact" class="py-24 bg-teal-950/30">
-        <div class="max-w-3xl mx-auto px-6 text-center" data-aos="zoom-in" data-aos-duration="1000">
-            <h2 class="text-4xl font-bold mb-6 text-teal-400">İletişime Geç</h2>
-            <p class="text-lg text-gray-300 mb-10">
-                Yeni bir proje, iş fırsatı veya sadece sohbet etmek için bana ulaşabilirsin.
+          <!-- Bio & Pillars -->
+          <div class="about-text-content">
+            <p class="about-bio" data-i18n="about.bioP1">
+              I am a Computer Engineering student with a deep interest in software architecture, algorithm design, system emulation, and modern full-stack web technologies. My goal is to build responsive, accessible, and high-performance digital tools that solve real-world problems.
             </p>
-            <a href="mailto:mehmetenesaldag@gmail.com" class="text-3xl font-bold text-white hover:text-teal-300 transition break-words">mehmetenesaldag@gmail.com</a>
+            <p class="about-bio" data-i18n="about.bioP2">
+              From low-level systems programming in C++ (CHIP-8 emulator) and JavaScript physics engines (Elementum) to dynamic real-time web applications with React, PostgreSQL, and Cloud tooling, I enjoy tackling engineering challenges from the ground up.
+            </p>
+
+            <!-- 4 Pillars -->
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  <span data-i18n="about.pillars.0.title">Clean Architecture</span>
+                </div>
+                <p class="pillar-desc" data-i18n="about.pillars.0.desc">Writing modular, testable, and maintainable code adhering to SOLID principles.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+                  <span data-i18n="about.pillars.1.title">Algorithms & Low-Level Systems</span>
+                </div>
+                <p class="pillar-desc" data-i18n="about.pillars.1.desc">Optimizing computational complexity, CPU cycle emulation, and physics simulations.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+                  <span data-i18n="about.pillars.2.title">Modern Web Systems</span>
+                </div>
+                <p class="pillar-desc" data-i18n="about.pillars.2.desc">Crafting fluid, accessible, and responsive user experiences with modern stacks.</p>
+              </div>
+
+              <div class="pillar-card">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                  <span data-i18n="about.pillars.3.title">Cloud & Databases</span>
+                </div>
+                <p class="pillar-desc" data-i18n="about.pillars.3.desc">Designing robust relational schemas and leveraging cloud deployments.</p>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer class="py-8 bg-gray-950 text-center text-gray-500 border-t border-gray-800">
-        <p>&copy; 2026 [Adın Soyadın]. Tüm Hakları Saklıdır.</p>
-    </footer>
+    <!-- 3. Skills Matrix Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="skills.tag">Technical Stack</span>
+          <h2 class="section-title" data-i18n="skills.title">Skills & Technologies</h2>
+          <p class="section-subtitle" data-i18n="skills.subtitle">Core technologies, frameworks, and developer tools in my engineering workflow.</p>
+        </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // AOS Kütüphanesini Başlat (Global Ayarlar)
-        AOS.init({
-            once: false, // Animasyonların her kaydırmada tekrar çalışması için false yap
-            mirror: true // Sayfa yukarı kaydırılırken de animasyonların çalışmasını sağlar
-        });
-    </script>
+        <!-- Filter Tabs -->
+        <div class="skills-filter-tabs" id="skills-filter-group" role="tablist">
+          <button class="filter-tab active" data-filter="all" data-i18n="skills.filterAll">All Technologies</button>
+          <button class="filter-tab" data-filter="languages" data-i18n="skills.filterLanguages">Languages</button>
+          <button class="filter-tab" data-filter="frontend" data-i18n="skills.filterFrontend">Frontend</button>
+          <button class="filter-tab" data-filter="backend" data-i18n="skills.filterBackend">Backend & DB</button>
+          <button class="filter-tab" data-filter="tools" data-i18n="skills.filterTools">DevOps & Tools</button>
+        </div>
+
+        <!-- Dynamic Skills Grid -->
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- 4. Projects Showcase Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="projects.tag">Featured Work</span>
+          <h2 class="section-title" data-i18n="projects.title">Highlighted Projects</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">Real-world web applications, hardware emulators, and physics engines built for performance and usability.</p>
+        </div>
+
+        <!-- Project Filter Tabs -->
+        <div class="skills-filter-tabs" id="projects-filter-group" role="tablist">
+          <button class="filter-tab active" data-filter="all" data-i18n="projects.filterAll">All Projects</button>
+          <button class="filter-tab" data-filter="web" data-i18n="projects.filterWeb">Web Apps</button>
+          <button class="filter-tab" data-filter="systems" data-i18n="projects.filterSystems">Systems & Physics</button>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- 5. Timeline & Education Section -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="timeline.tag">Milestones</span>
+          <h2 class="section-title" data-i18n="timeline.title">Education & Growth</h2>
+          <p class="section-subtitle" data-i18n="timeline.subtitle">Key academic foundations and continuous software engineering journey.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div id="timeline-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact.tag">Get In Touch</span>
+          <h2 class="section-title" data-i18n="contact.title">Let's Build Something Great</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Have an exciting project, internship opportunity, or just want to talk tech? Drop a line!</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Channels Info -->
+          <div class="contact-info-card">
+            <h3 style="font-family: var(--font-mono); font-size: 1.25rem; margin-bottom: var(--space-xs);" data-i18n="contact.directEmailTitle">Direct Email Communication</h3>
+            <p style="color: var(--text-muted); font-size: 0.9375rem;">Feel free to reach out directly or copy my email address for fast correspondence.</p>
+
+            <div class="contact-direct-email">
+              <span class="email-address-text">mehmetenesaldag@gmail.com</span>
+              <button id="copy-email-btn" class="btn btn-sm btn-primary" data-i18n="contact.copyEmail">
+                Copy Email
+              </button>
+            </div>
+
+            <!-- Social Links List -->
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 12px;">
+              <a href="https://github.com/mehmtens" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub: /mehmtens</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/mehmet-enes-alda%C4%9F-1b913426a/" target="_blank" rel="noopener" class="btn btn-outline" style="justify-content: flex-start;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn: Mehmet Enes Aldağ</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Interactive Form -->
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label" data-i18n="contact.formName">Your Name</label>
+              <input type="text" id="form-name" class="form-input" required placeholder="e.g. Alex Turing" data-i18n-placeholder="contact.formName">
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label" data-i18n="contact.formEmail">Your Email Address</label>
+              <input type="email" id="form-email" class="form-input" required placeholder="name@company.com" data-i18n-placeholder="contact.formEmail">
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label" data-i18n="contact.formSubject">Subject</label>
+              <input type="text" id="form-subject" class="form-input" required placeholder="Engineering Collaboration / Inquiry" data-i18n-placeholder="contact.formSubject">
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label" data-i18n="contact.formMessage">Your Message</label>
+              <textarea id="form-message" class="form-textarea" required placeholder="Hello Mehmet, I'd like to discuss..." data-i18n-placeholder="contact.formMessage"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+              <span data-i18n="contact.formSubmit">Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Architecture Deep Dive Modal -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-project-title">Project System Overview</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-project-body"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-text">
+        &copy; 2026 Mehmet Enes Aldağ. <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+      <div class="footer-text" style="color: var(--text-faint);" data-i18n="footer.builtWith">
+        Engineered with Vanilla HTML5, CSS3 & JavaScript. Zero Bloat.
+      </div>
+      <a href="#hero" class="footer-back-top" aria-label="Back to Top">
+        <span>Back to top</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
